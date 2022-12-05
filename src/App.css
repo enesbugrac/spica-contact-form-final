@@ -26,7 +26,7 @@ h1 {
   gap: 15px;
   height: 500px;
   padding: 30px 15px;
-  width: 25%;
+  width: 28%;
   align-items: center;
   box-shadow: 0 1px 6px 0 rgba(40, 54, 24, 0.38);
   border-radius: var(--border-radius);
@@ -52,6 +52,7 @@ h1 {
 }
 .contact-text-area::placeholder {
   color: var(--color-background);
+  opacity: 0.8;
   font-family: "Montserrat", sans-serif;
 }
 .contact-form-inputs {
@@ -80,17 +81,20 @@ h1 {
   gap: 30px;
 }
 .submit-button {
-  border: none;
   cursor: pointer;
   background-color: #0077b6;
   border-radius: 8px;
   color: var(--color-background);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
   -webkit-transition: background-color 300ms linear;
   -ms-transition: background-color 300ms linear;
   transition: background-color 300ms linear;
-
   padding: 16px;
+  border: 1px solid #0077b6;
 }
 .submit-button:hover {
   color: #0077b6;
@@ -115,5 +119,7 @@ h1 {
 }
 .contact-input::placeholder {
   opacity: 0.8;
+  font-family: "Montserrat", sans-serif;
+
   color: var(--color-background);
 }

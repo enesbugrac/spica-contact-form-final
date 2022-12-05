@@ -14,16 +14,13 @@ function App() {
   };
   const handleSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const res = await fetch(
-      "https://master.spicaengine.com/api/fn-execute/contact-form",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contactForm),
-      }
-    )
+    const res = await fetch("<YOUR_FUNCTION_URL>", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contactForm),
+    })
       .then((response) => response.json())
       .catch((err) => alert(err));
     alert(res.message);
