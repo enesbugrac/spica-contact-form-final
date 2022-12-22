@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import "./App.css";
 
@@ -26,22 +26,19 @@ function App() {
     alert(res.message);
   };
   return (
-    <div className={"App"}>
-      <h1>CONTACT FORM WITH SPICA FUNCTIONS</h1>
+    <div className="container">
       <form onSubmit={handleSubmitForm} className={"contact-form"}>
-        <h2 className="contact-form-header">Contact Form</h2>
+        <div className="contact-form-header ">Contact Form</div>
         <div className="contact-form-inputs">
           <input
             value={contactForm.email}
             onChange={handleChangeForm}
-            className="contact-input"
             placeholder="Enter Email..."
             type="email"
             required
             name="email"
           />
           <input
-            className="contact-input"
             placeholder="Enter Name..."
             type="text"
             value={contactForm.name}
@@ -50,7 +47,6 @@ function App() {
             required
           />
           <input
-            className="contact-input"
             placeholder="Enter Subject..."
             type="text"
             value={contactForm.subject}
@@ -58,7 +54,6 @@ function App() {
             name="subject"
           />
           <textarea
-            className="contact-text-area"
             placeholder="Enter Message..."
             name="message"
             value={contactForm.message}
@@ -68,11 +63,8 @@ function App() {
             required
           />
         </div>
-        <button className="submit-button" type="submit">
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
-      <div className={"operation-container"}></div>
     </div>
   );
 }
